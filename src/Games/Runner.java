@@ -39,37 +39,39 @@ public class Runner
     {
         Room[][] building = new Room[10][10];
 
-        int x = 0;
-        int y = 0;
-        int[] xList = new int[10];
-        int[] yList = new int[10];
-        int i = 0;
-        while(i<10)
+        for (int x = 0; x<building.length; x++)
         {
-            x = (int)(Math.random()*10);
-            y = (int)(Math.random()*10);
-
-            if(check(xList,x) || check(yList,y))
+            for (int y = 0; y < building[x].length; y++)
             {
-                xList[i] = x;
-                yList[i] = y;
                 building[x][y] = new Room(x,y);
-                i++;
-            }
-            else if (indexInArray(xList,x)!= indexInArray(yList,y))
-            {
-                xList[i] = x;
-                yList[i] = y;
-                building[x][y] = new Room(x,y);
-                i++;
             }
         }
 
 
-        //Create a random winning room.
-        x = (int)(Math.random()*building.length);
-        y = (int)(Math.random()*building.length);
+        //Create a random winning room which will cause the game to exit.
+        int x = (int)(Math.random()*building.length);
+        int y = (int)(Math.random()*building.length);
         building[x][y] = new ExitRoom(x, y);
+        int w = 0;
+        int [] xList = new int[10];
+        int [] yList = new int[10];
+
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            }
+        }
 
 
 

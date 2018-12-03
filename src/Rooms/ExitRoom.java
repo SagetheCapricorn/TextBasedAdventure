@@ -19,7 +19,7 @@ public class ExitRoom extends Room{
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the winning room! Ten points for Gryffindor.");
+        System.out.println("Valiant traveler your days of toil and adventure have led you to the exit of this fine castle. Take your riches and rejoice!");
         Runner.gameOff();
     }
 
