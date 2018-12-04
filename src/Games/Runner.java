@@ -103,6 +103,120 @@ public class Runner
                 w++;
             }
         }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Cellar(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Dovecoats(x, y);
+                w++;
+            }
+        }
+
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Armory(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Kitchen(x, y);
+                w++;
+            }
+        }
+        while(w< 9) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Garderobe(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Lodge(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new GreatHall(x, y);
+                w++;
+            }
+        }
+
 
 
 
