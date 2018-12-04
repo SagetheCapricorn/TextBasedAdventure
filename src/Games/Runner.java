@@ -1,8 +1,7 @@
 package Games;
 
 import People.Person;
-import Rooms.ExitRoom;
-import Rooms.Room;
+import Rooms.*;
 
 import java.util.Scanner;
 
@@ -68,7 +67,39 @@ public class Runner
             } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
                 xList[w] = x;
                 yList[w] = y;
+                building[x][y] = new Chapel(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
                 building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Dungeon(x, y);
+                w++;
+            }
+        }
+        while(w< 10) {
+            x = (int) (Math.random() * 10);
+            y = (int) (Math.random() * 10);
+
+            if (check(xList, x) || check(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Room(x, y);
+                w++;
+            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
+                xList[w] = x;
+                yList[w] = y;
+                building[x][y] = new Solar(x, y);
                 w++;
             }
         }
@@ -77,7 +108,7 @@ public class Runner
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
-        building[0][0].enterRoom(player1);
+        building[0][1].enterRoom(player1);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
