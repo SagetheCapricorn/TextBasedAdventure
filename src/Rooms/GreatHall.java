@@ -9,7 +9,7 @@ public class GreatHall extends Room {
 
 
     public void enterRoom(Person x) {
-        System.out.println(" You have entered the dungeon. You look around and see cobwebs in every corner, spiders and all types of insects wander the room. Spread across the floor is a small collection of human bones and ripped clothes.");
+        System.out.println(" You have entered the Great Hall. The ceiling is covered with immaculate tapestries depicting the biblical events and the walls are addorned with shiny suits of armor.");
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);

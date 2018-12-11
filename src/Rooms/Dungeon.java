@@ -15,3 +15,4 @@ public class Dungeon extends Room {
     }
 
 }
+//in this room i want the player to get a chance to pillage jewelry from a skeleton
