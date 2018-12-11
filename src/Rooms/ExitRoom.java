@@ -22,6 +22,10 @@ public class ExitRoom extends Room{
         System.out.println("Valiant traveler your days of toil and adventure have led you to the exit of this fine castle. Take your riches and rejoice!");
         Runner.gameOff();
     }
+    @Override public String toString()
+    {
+        return"BYE";
+    }
 
 
 }

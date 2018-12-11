@@ -14,6 +14,7 @@ public class Armory extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+
     @Override public String toString()
     {
             return "A";

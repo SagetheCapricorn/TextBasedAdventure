@@ -227,6 +227,7 @@ public class Runner
         }
 
         Board map = new Board(building);
+        map.Print();
 
 
 
