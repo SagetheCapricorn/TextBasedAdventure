@@ -14,5 +14,9 @@ public class Cellar extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+    @Override public String toString()
+    {
+        return"C";
+    }
 }
 //in this room i want the user to be able to get a type of potion

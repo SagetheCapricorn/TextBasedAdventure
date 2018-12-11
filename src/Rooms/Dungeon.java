@@ -13,6 +13,10 @@ public class Dungeon extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+    @Override public String toString()
+    {
+        return"Dun";
+    }
 
 }
 //in this room i want the player to get a chance to pillage jewelry from a skeleton

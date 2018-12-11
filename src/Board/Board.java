@@ -14,10 +14,11 @@ public class Board {
     {
         for (int i = 0; i < place.length; i++)
         {
-            for(int w = 0; w < place[i].length;i++)
+            for(int w = 0; w < place[i].length;w++)
             {
-                System.out.println(place[i][w]);
+                System.out.print(place[i][w]);
             }
+            System.out.println();
         }
     }
 }

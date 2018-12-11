@@ -14,5 +14,10 @@ public class Dovecoats extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+
+    @Override public String toString()
+    {
+        return"D";
+    }
 }
 //in this one i want to randomly select a color and type of bird fpr the userr top  get whenever they enter a dovecoat

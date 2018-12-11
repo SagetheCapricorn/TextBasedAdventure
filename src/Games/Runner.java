@@ -1,5 +1,6 @@
 package Games;
 
+import Board.Board;
 import People.Person;
 import Rooms.*;
 
@@ -71,6 +72,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -87,6 +89,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -103,6 +106,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -119,6 +123,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -135,7 +140,7 @@ public class Runner
                 w++;
             }
         }
-
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -152,6 +157,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -168,6 +174,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 9) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -184,6 +191,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -200,6 +208,7 @@ public class Runner
                 w++;
             }
         }
+        w = 0;
         while(w< 10) {
             x = (int) (Math.random() * 10);
             y = (int) (Math.random() * 10);
@@ -217,6 +226,8 @@ public class Runner
             }
         }
 
+        Board map = new Board(building);
+
 
 
 
@@ -226,6 +237,7 @@ public class Runner
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
+            map.Print();
             System.out.println("Where would you like to move? (Choose N, S, E, W)");
             String move = in.nextLine();
             if(validMove(move, player1, building))

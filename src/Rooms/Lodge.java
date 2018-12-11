@@ -13,5 +13,9 @@ public class Lodge extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+    @Override public String toString()
+    {
+        return"L";
+    }
 }
 //in this room i want the player to find some kind of armor

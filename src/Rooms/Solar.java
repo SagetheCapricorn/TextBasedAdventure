@@ -14,5 +14,9 @@ public class Solar extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
+    @Override public String toString()
+    {
+        return"S";
+    }
 
 }
