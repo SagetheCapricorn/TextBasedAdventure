@@ -33,6 +33,7 @@ public class Runner
         return true;
     }
 
+
     private static boolean gameOn = true;
 
     public static void main(String[] args)
@@ -47,11 +48,18 @@ public class Runner
             }
         }
 
+        int roomnumber=(int)Math.random()*10;
+        switch(roomnumber){
+            case 1: building[x][y] = new Room(x,y);
+
+            case 2:
+        }
+
 
         //Create a random winning room which will cause the game to exit.
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
-        building[x][y] = new ExitRoom(x, y);
+
         int w = 0;
         int [] xList = new int[10];
         int [] yList = new int[10];
@@ -225,9 +233,10 @@ public class Runner
                 w++;
             }
         }
+        building[x][y] = new ExitRoom(x, y);
 
         Board map = new Board(building);
-        map.Print();
+
 
 
 
