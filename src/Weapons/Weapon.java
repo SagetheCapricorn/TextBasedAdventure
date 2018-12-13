@@ -1,4 +1,6 @@
 package Weapons;
 
-public class Weapon {
+public interface Weapon {
+
+
 }

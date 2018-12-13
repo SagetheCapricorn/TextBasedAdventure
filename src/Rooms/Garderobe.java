@@ -13,8 +13,13 @@ public class Garderobe extends Room {
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
     }
-    @Override public String toString()
-    {
-        return"G";
+    @Override
+    public String toString() {
+        if (occupant != null) {
+            return "P";
+        } else {
+            return "*";
+        }
+
     }
 }

@@ -44,196 +44,47 @@ public class Runner
         {
             for (int y = 0; y < building[x].length; y++)
             {
-                building[x][y] = new Room(x,y);
+                int roomnumber=(int)(Math.random()*10);
+                switch(roomnumber){
+                    case 1: building[x][y] = new Kitchen(x,y);
+                        break;
+
+                    case 2:building[x][y] = new Garderobe(x,y);
+                        break;
+
+                    case 3:building[x][y] = new Armory(x,y);
+                        break;
+
+                    case 4: building[x][y] = new Dovecoats(x,y);
+                        break;
+
+                    case 5: building[x][y] = new Solar(x,y);
+                        break;
+
+                    case 6: building[x][y] = new Chapel(x,y);
+                        break;
+
+                    case 7: building[x][y] = new Cellar(x,y);
+                        break;
+
+                    case 8: building[x][y] = new Lodge(x,y);
+                        break;
+
+                    case 9: building[x][y] = new Dungeon(x,y);
+                        break;
+
+                    case 0: building[x][y] = new GreatHall(x,y);
+                        break;
+
+                }
             }
-        }
-
-        int roomnumber=(int)Math.random()*10;
-        switch(roomnumber){
-            case 1: building[x][y] = new Room(x,y);
-
-            case 2:
         }
 
 
         //Create a random winning room which will cause the game to exit.
-        int x = (int)(Math.random()*building.length);
-        int y = (int)(Math.random()*building.length);
-
-        int w = 0;
-        int [] xList = new int[10];
-        int [] yList = new int[10];
-
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Chapel(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Dungeon(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Solar(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Cellar(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Dovecoats(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Armory(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Kitchen(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 9) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Garderobe(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Lodge(x, y);
-                w++;
-            }
-        }
-        w = 0;
-        while(w< 10) {
-            x = (int) (Math.random() * 10);
-            y = (int) (Math.random() * 10);
-
-            if (check(xList, x) || check(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new Room(x, y);
-                w++;
-            } else if (indexInArray(xList, x) != indexInArray(yList, y)) {
-                xList[w] = x;
-                yList[w] = y;
-                building[x][y] = new GreatHall(x, y);
-                w++;
-            }
-        }
-        building[x][y] = new ExitRoom(x, y);
+        int e = (int)(Math.random()*building.length);
+        int r = (int)(Math.random()*building.length);
+        building[e][r] = new ExitRoom(e, r);
 
         Board map = new Board(building);
 
@@ -243,7 +94,7 @@ public class Runner
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
-        building[0][1].enterRoom(player1);
+        building[5][5].enterRoom(player1);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
