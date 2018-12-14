@@ -32,6 +32,45 @@ public class Runner
         }
         return true;
     }
+    Room[][] building = new Room[10][10];
+    private static Room Randroom(int x,int y)
+    {
+                int roomnumber=(int)(Math.random()*10);
+                switch(roomnumber){
+                    case 1: return new  Kitchen(x,y);
+
+
+                    case 2:return new Garderobe(x,y);
+
+
+                    case 3:return new Armory(x,y);
+
+
+                    case 4: return new Dovecoats(x,y);
+
+
+                    case 5: return new Solar(x,y);
+
+
+                    case 6: return new Chapel(x,y);
+
+
+                    case 7: return new Cellar(x,y);
+
+
+                    case 8: return new Lodge(x,y);
+
+
+                    case 9: return new Dungeon(x,y);
+
+
+                    case 0: return new GreatHall(x,y);
+
+
+
+    }
+        return Randroom(x,y);}
+
 
 
     private static boolean gameOn = true;
@@ -44,41 +83,10 @@ public class Runner
         {
             for (int y = 0; y < building[x].length; y++)
             {
-                int roomnumber=(int)(Math.random()*10);
-                switch(roomnumber){
-                    case 1: building[x][y] = new Kitchen(x,y);
-                        break;
-
-                    case 2:building[x][y] = new Garderobe(x,y);
-                        break;
-
-                    case 3:building[x][y] = new Armory(x,y);
-                        break;
-
-                    case 4: building[x][y] = new Dovecoats(x,y);
-                        break;
-
-                    case 5: building[x][y] = new Solar(x,y);
-                        break;
-
-                    case 6: building[x][y] = new Chapel(x,y);
-                        break;
-
-                    case 7: building[x][y] = new Cellar(x,y);
-                        break;
-
-                    case 8: building[x][y] = new Lodge(x,y);
-                        break;
-
-                    case 9: building[x][y] = new Dungeon(x,y);
-                        break;
-
-                    case 0: building[x][y] = new GreatHall(x,y);
-                        break;
-
+                Randroom(x,y);
                 }
             }
-        }
+
 
 
         //Create a random winning room which will cause the game to exit.
