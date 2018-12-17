@@ -15,9 +15,9 @@ public class Armory extends Room {
         x.setyLoc(this.yLoc);
     }
 
-    /*@Override public String toString()
+    @Override public String toString()
     {
             return "A";
-    }*/
+    }
 }
 //in this room i want the user to finda type of weapon

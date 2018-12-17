@@ -83,7 +83,7 @@ public class Runner
         {
             for (int y = 0; y < building[x].length; y++)
             {
-                Randroom(x,y);
+                building[x][y] = Randroom(x,y);
                 }
             }
 
@@ -95,6 +95,9 @@ public class Runner
         building[e][r] = new ExitRoom(e, r);
 
         Board map = new Board(building);
+        int s = (int)(Math.random()*building.length);
+        int p = (int)(Math.random()*building.length);
+
 
 
 
@@ -102,7 +105,7 @@ public class Runner
 
         //Setup player 1 and the input scanner
         Person player1 = new Person("FirstName", "FamilyName", 0,0);
-        building[5][5].enterRoom(player1);
+        building[s][p].enterRoom(player1);
         Scanner in = new Scanner(System.in);
         while(gameOn)
         {
