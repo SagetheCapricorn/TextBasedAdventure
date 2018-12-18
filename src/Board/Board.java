@@ -4,11 +4,17 @@ import Rooms.Room;
 
 public class Board {
     private Room[][] place;
-    private Room[][] betterroom;
+    private Room[][] goodstart;
+    private int row;
+    private int collumn;
 
     public Board(Room[][] place) {
 
         this.place = place;
+    }
+    public Board(int x, int y){
+        this.row = row;
+        this.collumn = collumn;
     }
     public void Print()
     {

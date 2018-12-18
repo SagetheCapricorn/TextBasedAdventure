@@ -32,7 +32,7 @@ public class Runner
         }
         return true;
     }
-    Room[][] building = new Room[10][10];
+
     private static Room Randroom(int x,int y)
     {
                 int roomnumber=(int)(Math.random()*10);

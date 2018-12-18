@@ -6,6 +6,7 @@ public class Armory extends Room {
     public Armory(int x, int y) {
         super(x, y);
     }
+    int w = 0;
 
 
     public void enterRoom(Person x) {
@@ -15,9 +16,28 @@ public class Armory extends Room {
         x.setyLoc(this.yLoc);
     }
 
-    @Override public String toString()
-    {
-            return "A";
+    @Override
+    public String toString() {
+        if (occupant != null) {
+            return "P";
+        } else {
+            return "*";
+        }
+
     }
+    public String toString(String occupant){
+        if (occupant != null){
+            return "P";
+        }
+        else{
+            w +=1;
+            return"*";
+        }
+
+
+
+    }
+
+
 }
 //in this room i want the user to finda type of weapon
