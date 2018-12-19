@@ -1,14 +1,14 @@
 package Weapons;
 
-public class DualSword implements Weapon {
+public class RustyAxe implements Weapon {
     @Override
     public int GetStrength()
     {
-        return 100;
+        return 120;
     }
     @Override
     public String toString()
     {
-        return "Dual Sword forged in fire";
+        return "An old rusty Axe";
     }
 }

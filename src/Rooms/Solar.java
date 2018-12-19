@@ -24,4 +24,5 @@ public class Solar extends Room {
         }
 
     }
+
 }

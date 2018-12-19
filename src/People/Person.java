@@ -1,4 +1,7 @@
 package People;
+import Weapons.Weapon;
+
+import java.util.ArrayList;
 
 public class Person {
     String firstName;
@@ -29,6 +32,9 @@ public class Person {
         this.xLoc = xLoc;
         this.yLoc = yLoc;
     }
+    public ArrayList<Weapon> arsenal = new ArrayList<>();
+
+
 
 
 

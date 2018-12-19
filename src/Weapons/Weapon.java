@@ -1,7 +1,9 @@
 package Weapons;
 
 public interface Weapon {
-    int GetPower();
+    int GetStrength();
+
+    String toString();
 
 
 }

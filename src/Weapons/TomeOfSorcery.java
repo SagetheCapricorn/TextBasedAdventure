@@ -1,14 +1,15 @@
 package Weapons;
 
-public class DualSword implements Weapon {
+public class TomeOfSorcery implements Weapon {
     @Override
     public int GetStrength()
     {
-        return 100;
+        return 60;
     }
     @Override
     public String toString()
     {
-        return "Dual Sword forged in fire";
+        return "The spell book of a noble wizard";
     }
 }
+
